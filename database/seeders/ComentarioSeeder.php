@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Comentario;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Schema;
@@ -15,15 +16,8 @@ class ComentarioSeeder extends Seeder
      */
     public function run()
     {
-        Schema::create('comentarios', function (Blueprint $table) {
-            $table->id();
-
-            $table->string('email');
-            $table->text('texto')->nullable();
-            $table->dateTimeTz('fecha')->nullable();
-            $table->boolean('visible')->nullable()->default(false);
-
-            $table->timestamps();
-        });
+        Comentario::factory(10)->create([
+            'entrada_id' => 1
+        ]);
     }
 }

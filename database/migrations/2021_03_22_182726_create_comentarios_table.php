@@ -15,6 +15,12 @@ class CreateComentariosTable extends Migration
     {
         Schema::create('comentarios', function (Blueprint $table) {
             $table->id();
+
+            $table->string('email');
+            $table->text('texto')->nullable();
+            $table->dateTimeTz('fecha')->nullable();
+            $table->boolean('visible')->nullable()->default(false);
+
             $table->timestamps();
         });
     }

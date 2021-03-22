@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ComentarioController;
 use App\Http\Controllers\EntradaController;
 use Illuminate\Support\Facades\Route;
 
